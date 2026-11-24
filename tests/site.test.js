@@ -13,7 +13,7 @@ const html = Object.fromEntries(Object.entries(PAGES).map(([l, p]) => [l, read(p
 
 const localRefs = (page, src) => {
   const out = [];
-  for (const m of src.matchAll(/(?:src|href)="([^"#]+)"/g)) {
+  for (const m of src.matchAll(/(?:src|href|poster|data-poster-end)="([^"#]+)"/g)) {
     const u = m[1];
     if (/^(https?:|mailto:|data:)/.test(u)) continue;
     out.push(normalize(join(dirname(page), u)));
@@ -36,9 +36,12 @@ test('both languages have the same structure', () => {
   assert.deepEqual(ids(html.es), ids(html.en));
   for (const lang of ['es', 'en']) {
     assert.equal((html[lang].match(/class="wtab[ "]/g) || []).length, 4, `${lang}: 4 showcase tabs`);
-    assert.equal((html[lang].match(/class="wslide"/g) || []).length, 4, `${lang}: 4 showcase slides`);
-    assert.equal((html[lang].match(/class="fr( on)?"/g) || []).length, 38, `${lang}: 38 frames`);
-    assert.equal((html[lang].match(/class="fr on"/g) || []).length, 4, `${lang}: first frame of each slide visible`);
+    assert.equal((html[lang].match(/class="wslide( cur)?"/g) || []).length, 4, `${lang}: 4 showcase slides`);
+    const vids = html[lang].match(/<video [\s\S]*?<\/video>/g) || [];
+    assert.equal(vids.length, 4, `${lang}: one video per slide`);
+    for (const v of vids) {
+      for (const attr of ['muted', 'playsinline', 'poster=', 'data-poster-end=', 'type="video/mp4"', 'aria-label=']) assert.ok(v.includes(attr), `${lang}: video missing ${attr}`);
+    }
   }
 });
 
@@ -61,10 +64,11 @@ test('no leftovers from the design canvas', () => {
   }
 });
 
-test('showcase script parses and every image has dimensions', () => {
+test('showcase script parses; images and videos are described and sized', () => {
   new vm.Script(read('src/main.js'));
   for (const s of Object.values(html)) {
     for (const m of s.matchAll(/<img [^>]*>/g)) assert.match(m[0], /\salt="/, 'img without alt');
-    for (const m of s.matchAll(/<img class="fr[^>]*>/g)) assert.match(m[0], /width="1280" height="800"/);
+    assert.equal((s.match(/<img class="still"/g) || []).length, 4, 'a still frame under each video');
+    for (const m of s.matchAll(/<video [^>]*>/g)) assert.match(m[0], /width="1280" height="800"/);
   }
 });
