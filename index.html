@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulario · El futuro de aprender</title>
+<meta name="description" content="Simuladores interactivos para aprender Medicina: atlas TC de cuerpo entero, neuroatlas 3D y simuladores de fisiopatología. Cambia un parámetro y mira qué pasa.">
+<meta name="theme-color" content="#4B3FE0">
+<link rel="canonical" href="https://ferasmed-dev.github.io/simulario-site/">
+<link rel="alternate" hreflang="es" href="https://ferasmed-dev.github.io/simulario-site/">
+<link rel="alternate" hreflang="en" href="https://ferasmed-dev.github.io/simulario-site/en/">
+<link rel="alternate" hreflang="x-default" href="https://ferasmed-dev.github.io/simulario-site/">
+<link rel="icon" href="assets/brand/simulario-icon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/brand/simulario-icon-512.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Simulario">
+<meta property="og:title" content="Simulario · El futuro de aprender">
+<meta property="og:description" content="Simuladores interactivos para aprender Medicina: atlas TC de cuerpo entero, neuroatlas 3D y simuladores de fisiopatología. Cambia un parámetro y mira qué pasa.">
+<meta property="og:url" content="https://ferasmed-dev.github.io/simulario-site/">
+<meta property="og:image" content="https://ferasmed-dev.github.io/simulario-site/assets/og.jpg">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+<link rel="stylesheet" href="src/styles.css">
+<script src="src/main.js" defer></script>
+</head>
+<body>
+<div style="width: 100%; min-height: 100vh; background: #F5F6FB; overflow-x: hidden">
+
+<header style="position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,0.9); backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid #E1E3EE">
+<div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px">
+<a href="#inicio" aria-label="Simulario, inicio" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #12142B; padding: 9px 0">
+<img src="assets/brand/simulario-icon.svg" alt="" style="width: 36px; height: 36px; display: block">
+<span style="font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 700; font-size: 30px; line-height: 1; letter-spacing: -0.03em">Simulario</span>
+</a>
+<nav aria-label="Principal" style="display: flex; align-items: center; gap: 28px">
+<a class="nl" href="#como-funciona">Cómo funciona</a>
+<a class="nl" href="#simuladores">Simuladores</a>
+<a class="nl" href="#docentes">Para docentes</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 12px">
+<div role="group" aria-label="Idioma" style="display: flex; align-items: center; border: 1px solid #E1E3EE; border-radius: 999px; background: #FFFFFF; padding: 2px">
+<span aria-current="true" style="display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 40px; padding: 0 12px; border-radius: 999px; background: #12142B; color: #FFFFFF; font-size: 13px; font-weight: 600">ES</span>
+<a href="en/" hreflang="en" lang="en" aria-label="English version" style="display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 40px; padding: 0 12px; border-radius: 999px; color: #5A5F7A; font-size: 13px; font-weight: 600; text-decoration: none">EN</a>
+</div>
+<a class="btn btn-primary hide-xs" href="#simuladores">Abrir simulador</a>
+</div>
+</div>
+</header>
+
+<main id="inicio">
+
+<section style="padding: clamp(48px, 7vw, 96px) 0 clamp(64px, 8vw, 112px)">
+<div class="wrap" style="display: flex; flex-direction: column; align-items: center; gap: clamp(36px, 5vw, 56px)">
+<div style="display: flex; flex-direction: column; gap: 24px; align-items: center; text-align: center; max-width: 780px">
+<span class="label rise" style="display: inline-flex; align-items: center; gap: 8px; color: #3127B8"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>Simuladores interactivos para aprender</span>
+<h1 class="rise d1" style="font-weight: 700; font-size: clamp(46px, 7.2vw, 80px); line-height: 0.98; letter-spacing: -0.035em; color: #12142B">El futuro de aprender</h1>
+<p class="rise d2" style="margin: 0; font-size: clamp(17px, 1.7vw, 20px); line-height: 1.55; color: #5A5F7A; max-width: 600px">Deja de solo leer apuntes. Explora modelos realistas, cambia un parámetro y mira qué pasa. Así se entiende, y así se queda.</p>
+<div class="rise d3" style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center">
+<a class="btn btn-primary" href="#simuladores"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 5l11 7-11 7z"></path></svg>Explorar simuladores</a>
+<a class="btn btn-secondary" href="#como-funciona">Cómo funciona</a>
+</div>
+<p class="rise d4" style="margin: 0; font-size: 14px; line-height: 20px; color: #5A5F7A; max-width: 520px">Hecho en Valencia por un estudiante de Medicina, para estudiantes y docentes de las facultades de Medicina de España.</p>
+</div>
+<div class="win rise d3">
+<div class="wbar">
+<span class="wdots" aria-hidden="true"><i></i><i></i><i></i></span>
+<div class="wtabs" role="group" aria-label="Simuladores">
+<button type="button" class="wtab on" aria-pressed="true" data-slide="0">Atlas TC</button>
+<button type="button" class="wtab" aria-pressed="false" data-slide="1">Neuroatlas</button>
+<button type="button" class="wtab" aria-pressed="false" data-slide="2">Hiperfiltración</button>
+<button type="button" class="wtab" aria-pressed="false" data-slide="3">Examen</button>
+</div>
+</div>
+<div class="wurlrow">
+<span class="wpane" data-slide="0"><a class="wurl" href="https://ferasmed-dev.github.io/whole-body-ct-atlas/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg><span class="wtxt">ferasmed-dev.github.io/whole-body-ct-atlas</span><span class="wopen">Abrir<svg class="ic" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span></a></span>
+<span class="wpane" data-slide="1" hidden><span class="wurl"><svg class="ic" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg><span class="wtxt">neuroatlas · vista previa</span></span></span>
+<span class="wpane" data-slide="2" hidden><a class="wurl" href="https://ferasmed-dev.github.io/simulator-glomerular-of-hyperfiltration/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg><span class="wtxt">ferasmed-dev.github.io/simulator-glomerular-of-hyperfiltration</span><span class="wopen">Abrir<svg class="ic" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span></a></span>
+<span class="wpane" data-slide="3" hidden><a class="wurl" href="https://ferasmed-dev.github.io/whole-body-ct-atlas/?module=urinario&amp;exam=1" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg><span class="wtxt">ferasmed-dev.github.io/whole-body-ct-atlas/?module=urinario&amp;exam=1</span><span class="wopen">Abrir<svg class="ic" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></span></a></span>
+</div>
+<div class="wscreen">
+<div class="wtrack" style="transform: translateX(0%)">
+<div class="wslide" aria-hidden="false">
+<img class="fr on" src="assets/frames/ct-es-00.webp" alt="Atlas TC de cuerpo entero en vista triple, con estructuras segmentadas y etiquetadas" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/ct-es-01.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/ct-es-02.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/ct-es-03.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/ct-es-04.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/ct-es-05.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/ct-es-06.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/ct-es-07.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/ct-es-08.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/ct-es-09.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/ct-es-10.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/ct-es-11.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/ct-es-12.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/ct-es-13.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+</div>
+<div class="wslide" aria-hidden="true">
+<img class="fr on" src="assets/frames/neuro-00.webp" alt="Neuroatlas: modelo 3D del cerebro y corte de RM de 7 T" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/neuro-01.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/neuro-02.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/neuro-03.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/neuro-04.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/neuro-05.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/neuro-06.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/neuro-07.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/neuro-08.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/neuro-09.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/neuro-10.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/neuro-11.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+</div>
+<div class="wslide" aria-hidden="true">
+<img class="fr on" src="assets/frames/g2-es-00.webp" alt="Simulador de hiperfiltración glomerular en el escenario de HTA mantenida" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/g2-es-01.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/g2-es-02.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/g2-es-03.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/g2-es-04.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/g2-es-05.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/g2-es-06.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/g2-es-07.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/g2-es-08.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+</div>
+<div class="wslide" aria-hidden="true">
+<img class="fr on" src="assets/frames/exam-es-00.webp" alt="Modo examen del atlas TC: pregunta sobre una lesión" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/exam-es-01.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+<img class="fr" src="assets/frames/exam-es-02.webp" alt="" aria-hidden="true" width="1280" height="800" decoding="async" draggable="false">
+</div>
+</div>
+</div>
+<div class="wprog"><i style="width: 0%"></i></div>
+</div>
+<p class="wcap" aria-live="polite">
+<span class="wpane" data-slide="0"><span>115 estructuras segmentadas y etiquetadas sobre un TC real. Desplázate por los cortes y pasa el ratón para identificar.</span></span>
+<span class="wpane" data-slide="1" hidden><span>Un cerebro real de RM de 7 T, en 3D y en cortes. Vista previa en desarrollo.</span></span>
+<span class="wpane" data-slide="2" hidden><span>Escenario «HTA mantenida»: 30 años de hiperfiltración en el modelo del simulador.</span></span>
+<span class="wpane" data-slide="3" hidden><span>Modo examen: identifica la lesión dibujada sobre el TC real.</span></span>
+</p>
+</div>
+</section>
+
+<section id="como-funciona" style="padding: clamp(64px, 9vw, 112px) 0; background: #FFFFFF; border-top: 1px solid #E1E3EE; border-bottom: 1px solid #E1E3EE; scroll-margin-top: 72px">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 14px; max-width: 640px">
+<span class="label" style="color: #3127B8">Cómo funciona</span>
+<h2 class="h2">Aprende haciendo</h2>
+<p class="lead">Cada simulador te deja cambiar algo y ver qué pasa. Tú decides qué tocar.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 24px">
+<article class="card lift reveal" style="padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<span style="width: 48px; height: 48px; border-radius: 12px; background: #ECEAFE; color: #3127B8; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"></path><path d="M3 13l9 5 9-5"></path><path d="M3 17.5l9 5 9-5"></path></svg></span>
+<span class="mono" style="font-size: 14px; color: #5A5F7A">01</span>
+</div>
+<h3 style="font-weight: 600; font-size: 24px; line-height: 30px; letter-spacing: -0.01em">Explora</h3>
+<p style="margin: 0; font-size: 15px; line-height: 22px; color: #5A5F7A">Recorre el modelo capa a capa: los cortes de un escáner, los niveles de un sistema, las fases de un proceso.</p>
+</article>
+<article class="card lift reveal" style="padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<span style="width: 48px; height: 48px; border-radius: 12px; background: #ECEAFE; color: #3127B8; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 6h9"></path><path d="M17 6h3"></path><circle cx="15" cy="6" r="2"></circle><path d="M4 12h3"></path><path d="M11 12h9"></path><circle cx="9" cy="12" r="2"></circle><path d="M4 18h11"></path><path d="M19 18h1"></path><circle cx="17" cy="18" r="2"></circle></svg></span>
+<span class="mono" style="font-size: 14px; color: #5A5F7A">02</span>
+</div>
+<h3 style="font-weight: 600; font-size: 24px; line-height: 30px; letter-spacing: -0.01em">Cambia</h3>
+<p style="margin: 0; font-size: 15px; line-height: 22px; color: #5A5F7A">Mueve un parámetro. Sube la presión arterial, pasa al siguiente corte, abre otro caso.</p>
+</article>
+<article class="card lift reveal" style="padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<span style="width: 48px; height: 48px; border-radius: 12px; background: #ECEAFE; color: #3127B8; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></span>
+<span class="mono" style="font-size: 14px; color: #5A5F7A">03</span>
+</div>
+<h3 style="font-weight: 600; font-size: 24px; line-height: 30px; letter-spacing: -0.01em">Observa</h3>
+<p style="margin: 0; font-size: 15px; line-height: 22px; color: #5A5F7A">Mira qué pasa en tiempo real y entiende por qué. Lo que has visto cambiar se te queda.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section id="simuladores" style="padding: clamp(64px, 9vw, 112px) 0; scroll-margin-top: 72px">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 14px; max-width: 640px">
+<span class="label" style="color: #3127B8">Simuladores</span>
+<h2 class="h2">Elige por dónde empezar</h2>
+<p class="lead">Cada simulador trabaja un tema concreto del grado. Ábrelo y prueba.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 24px">
+<article class="card lift reveal" style="overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 128px; background: #ECEAFE; display: flex; align-items: center; justify-content: center"><svg viewBox="20 22 60 62" width="120" height="88" aria-hidden="true"><polygon class="lay1" points="50,52 80,66 50,80 20,66"></polygon><polygon class="lay2" points="50,39 80,53 50,67 20,53"></polygon><polygon class="lay3" points="50,26 80,40 50,54 20,40"></polygon></svg></div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
+<span class="label" style="align-self: flex-start; background: #DDF8EF; color: #12142B; padding: 4px 10px; border-radius: 999px">Radiología</span>
+<h3 style="font-weight: 600; font-size: 22px; line-height: 28px; letter-spacing: -0.01em">Atlas TC de cuerpo entero</h3>
+<p style="margin: 0; font-size: 14px; line-height: 20px; color: #5A5F7A; flex-grow: 1">Recorre cortes axiales y encuentra los hallazgos de cada caso.</p>
+<a class="tlink" href="https://ferasmed-dev.github.io/whole-body-ct-atlas/" target="_blank" rel="noopener">Abrir simulador<svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+</div>
+</article>
+<article class="card lift reveal" style="overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 128px; background: #ECEAFE; display: flex; align-items: center; justify-content: center"><svg viewBox="20 22 60 62" width="120" height="88" aria-hidden="true"><polygon class="lay1" points="50,52 80,66 50,80 20,66"></polygon><polygon class="lay2" points="50,39 80,53 50,67 20,53"></polygon><polygon class="lay3" points="50,26 80,40 50,54 20,40"></polygon></svg></div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
+<span class="label" style="align-self: flex-start; background: #DDF8EF; color: #12142B; padding: 4px 10px; border-radius: 999px">Nefrología</span>
+<h3 style="font-weight: 600; font-size: 22px; line-height: 28px; letter-spacing: -0.01em">Autorregulación renal</h3>
+<p style="margin: 0; font-size: 14px; line-height: 20px; color: #5A5F7A; flex-grow: 1">Sube la presión arterial y mira qué le pasa al filtrado.</p>
+<a class="tlink" href="#">Abrir simulador<svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+</div>
+</article>
+<article class="card lift reveal" style="overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 128px; background: #ECEAFE; display: flex; align-items: center; justify-content: center"><svg viewBox="20 22 60 62" width="120" height="88" aria-hidden="true"><polygon class="lay1" points="50,52 80,66 50,80 20,66"></polygon><polygon class="lay2" points="50,39 80,53 50,67 20,53"></polygon><polygon class="lay3" points="50,26 80,40 50,54 20,40"></polygon></svg></div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
+<span class="label" style="align-self: flex-start; background: #DDF8EF; color: #12142B; padding: 4px 10px; border-radius: 999px">Nefrología</span>
+<h3 style="font-weight: 600; font-size: 22px; line-height: 28px; letter-spacing: -0.01em">Hiperfiltración glomerular</h3>
+<p style="margin: 0; font-size: 14px; line-height: 20px; color: #5A5F7A; flex-grow: 1">Cambia un parámetro y observa cómo responde el glomérulo.</p>
+<a class="tlink" href="https://ferasmed-dev.github.io/simulator-glomerular-of-hyperfiltration/" target="_blank" rel="noopener">Abrir simulador<svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+</div>
+</article>
+<article class="reveal" style="border: 1.5px dashed #C9CCDC; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 12px; justify-content: center; min-height: 280px; background: rgba(255,255,255,0.5)">
+<span class="label" style="align-self: flex-start; background: #ECEAFE; color: #12142B; padding: 4px 10px; border-radius: 999px">Próximamente</span>
+<h3 style="font-weight: 600; font-size: 22px; line-height: 28px; letter-spacing: -0.01em">Más asignaturas</h3>
+<p style="margin: 0; font-size: 14px; line-height: 20px; color: #5A5F7A">La medicina es donde empieza Simulario, no donde termina. Si se aprende haciendo, cabe aquí.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section style="background: #12142B; color: #FFFFFF; padding: clamp(64px, 9vw, 120px) 0; overflow: hidden">
+<div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: clamp(40px, 6vw, 72px); align-items: center">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 20px; align-items: flex-start">
+<span class="label" style="color: #A9ADC8">Radiología · Atlas TC</span>
+<h2 class="h2" style="color: #FFFFFF">Este caso tiene 3 hallazgos. ¿Los encuentras?</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #C9CCE0; max-width: 520px">Recorre un TC de cuerpo entero corte a corte. Cada caso de patología esconde hallazgos que tienes que localizar tú, como en la consulta.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
+<a class="btn btn-mint" href="https://ferasmed-dev.github.io/whole-body-ct-atlas/?module=urinario&amp;exam=1" target="_blank" rel="noopener">Probar caso</a>
+<span class="mono" style="font-size: 14px; color: #F2F3FA; border: 1px solid #2A2E4A; border-radius: 999px; padding: 10px 16px">Corte axial 84 / 212</span>
+</div>
+</div>
+<div class="reveal" style="display: flex; justify-content: center">
+<svg viewBox="0 0 240 240" aria-hidden="true" style="width: min(100%, 380px); height: auto; display: block">
+<polygon class="slice" points="120,18 210,60 120,102 30,60"></polygon>
+<polygon class="slice" points="120,38 210,80 120,122 30,80"></polygon>
+<polygon class="slice" points="120,58 210,100 120,142 30,100"></polygon>
+<polygon class="slice" points="120,78 210,120 120,162 30,120"></polygon>
+<polygon class="slice" points="120,98 210,140 120,182 30,140"></polygon>
+<polygon class="slice" points="120,118 210,160 120,202 30,160"></polygon>
+<polygon class="slice" points="120,138 210,180 120,222 30,180"></polygon>
+<g class="scan">
+<polygon class="active" points="120,78 210,120 120,162 30,120"></polygon>
+<path class="pulse" d="M63 120 L93 120 L106.5 99 L121.5 141 L135 105 L145.5 120 L177 120"></path>
+</g>
+</svg>
+</div>
+</div>
+</section>
+
+<section id="docentes" style="padding: clamp(64px, 9vw, 112px) 0; scroll-margin-top: 72px">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 14px; max-width: 640px">
+<span class="label" style="color: #3127B8">Para quién</span>
+<h2 class="h2">Para quien estudia y para quien enseña</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 24px">
+<article class="card reveal" style="padding: clamp(24px, 4vw, 36px); display: flex; flex-direction: column; gap: 16px">
+<span style="width: 48px; height: 48px; border-radius: 12px; background: #ECEAFE; color: #3127B8; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M2 7l10-4 10 4-10 4-10-4z"></path><path d="M6 9v5c0 1.7 2.7 3 6 3s6-1.3 6-3V9"></path><path d="M22 7v6"></path></svg></span>
+<h3 style="font-weight: 600; font-size: 24px; line-height: 30px; letter-spacing: -0.01em">Estudiantes</h3>
+<p style="margin: 0; font-size: 16px; line-height: 24px; color: #5A5F7A">Repasa practicando, no releyendo. Equivócate, vuelve a probar y comprueba si de verdad lo has entendido antes del examen.</p>
+</article>
+<article class="card reveal" style="padding: clamp(24px, 4vw, 36px); display: flex; flex-direction: column; gap: 16px">
+<span style="width: 48px; height: 48px; border-radius: 12px; background: #ECEAFE; color: #3127B8; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8"></path><path d="M12 16v4"></path><path d="M10 8.5l4 1.5-4 1.5z"></path></svg></span>
+<h3 style="font-weight: 600; font-size: 24px; line-height: 30px; letter-spacing: -0.01em">Docentes</h3>
+<p style="margin: 0; font-size: 16px; line-height: 24px; color: #5A5F7A">Proyecta un simulador en clase y cambia los parámetros en directo. Pensado para las facultades de Medicina de España.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section style="padding: 0 0 clamp(64px, 9vw, 112px)">
+<div class="wrap">
+<div class="reveal" style="background: #4B3FE0; border-radius: 20px; padding: clamp(40px, 7vw, 72px) clamp(24px, 5vw, 56px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
+<img src="assets/brand/simulario-mark-white.svg" alt="" style="width: 70px; height: 64px; display: block">
+<h2 class="h2" style="color: #FFFFFF; max-width: 640px">Empieza por un caso</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #FFFFFF; max-width: 520px">Abre el atlas TC, elige un caso y busca tu primer hallazgo.</p>
+<a class="btn btn-white" href="https://ferasmed-dev.github.io/whole-body-ct-atlas/" target="_blank" rel="noopener">Abrir simulador</a>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer style="background: #12142B; color: #A9ADC8; padding: 48px 0 32px">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px">
+<a href="#inicio" aria-label="Simulario, inicio" style="display: flex; align-items: center; gap: 9px; text-decoration: none; color: #FFFFFF">
+<img src="assets/brand/simulario-icon.svg" alt="" style="width: 32px; height: 32px; display: block">
+<span style="font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 700; font-size: 27px; line-height: 1; letter-spacing: -0.03em">Simulario</span>
+</a>
+<nav aria-label="Pie de página" style="display: flex; flex-wrap: wrap; gap: 8px 24px">
+<a href="#como-funciona" style="color: #C9CCE0; text-decoration: none; font-size: 15px; padding: 12px 0">Cómo funciona</a>
+<a href="#simuladores" style="color: #C9CCE0; text-decoration: none; font-size: 15px; padding: 12px 0">Simuladores</a>
+<a href="#docentes" style="color: #C9CCE0; text-decoration: none; font-size: 15px; padding: 12px 0">Para docentes</a>
+<a href="en/" hreflang="en" lang="en" style="color: #C9CCE0; text-decoration: none; font-size: 15px; padding: 12px 0">English</a>
+</nav>
+</div>
+<div style="border-top: 1px solid #2A2E4A; padding-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; line-height: 20px">
+<span>© 2026 Simulario</span>
+<span>Hecho en Valencia por un estudiante de Medicina.</span>
+</div>
+</div>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+/* Simulario landing page. Colours, type and radii follow the Simulario brand guidelines (tokens.css). */
+
+body{margin:0;background:#F5F6FB;color:#12142B;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+a{color:#3127B8}a:hover{color:#4B3FE0}
+h1,h2,h3{font-family:"Space Grotesk",system-ui,sans-serif;margin:0}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+.label{font:600 12px/16px Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;font-weight:500;font-variant-numeric:tabular-nums}
+.h2{font-weight:700;font-size:clamp(30px,4.4vw,44px);line-height:1.08;letter-spacing:-.02em}
+.lead{margin:0;font-size:17px;line-height:1.6;color:#5A5F7A}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 20px;border-radius:12px;font:600 15px/1 Inter,system-ui,sans-serif;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,.tlink:focus-visible,.nl:focus-visible{outline:2px solid #3127B8;outline-offset:2px}
+.btn-primary{background:#4B3FE0;color:#FFFFFF}.btn-primary:hover{background:#3127B8;color:#FFFFFF;box-shadow:0 10px 24px rgba(75,63,224,.28)}
+.btn-secondary{background:#FFFFFF;color:#12142B;border-color:#5A5F7A}.btn-secondary:hover{color:#12142B;box-shadow:0 8px 20px rgba(18,20,43,.10)}
+.btn-mint{background:#3DDCB0;color:#12142B}.btn-mint:hover{color:#12142B;box-shadow:0 10px 24px rgba(61,220,176,.30)}
+.btn-white{background:#FFFFFF;color:#12142B}.btn-white:hover{color:#12142B;box-shadow:0 10px 24px rgba(18,20,43,.25)}
+.card{background:#FFFFFF;border:1px solid #E1E3EE;border-radius:20px;box-shadow:0 1px 2px rgba(18,20,43,.06),0 8px 24px rgba(18,20,43,.08)}
+.lift{transition:transform .25s ease,box-shadow .25s ease}
+.lift:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(18,20,43,.06),0 18px 40px rgba(18,20,43,.12)}
+.ic{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.nl{color:#5A5F7A;text-decoration:none;font-weight:500;font-size:15px;padding:12px 4px;transition:color .2s ease}
+.nl:hover{color:#12142B}
+.tlink{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-weight:600;font-size:15px;color:#3127B8;text-decoration:none}
+.tlink svg{transition:transform .2s ease}
+.tlink:hover svg{transform:translateX(4px)}
+.lay1{fill:#4B3FE0;fill-opacity:.25}.lay2{fill:#4B3FE0;fill-opacity:.5}.lay3{fill:#3DDCB0}
+.slice{fill:#FFFFFF;fill-opacity:.05;stroke:#FFFFFF;stroke-opacity:.22;stroke-width:1}
+.active{fill:#3DDCB0}
+.pulse{fill:none;stroke:#12142B;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+input[type=range]{width:100%;height:32px;margin:0;accent-color:#4B3FE0;cursor:pointer;touch-action:pan-y}
+.win{width:100%;max-width:1120px;background:#12142B;border:1px solid #2A2E4A;border-radius:16px;overflow:hidden;box-shadow:0 2px 4px rgba(18,20,43,.08),0 30px 80px rgba(18,20,43,.28)}
+.wbar{display:flex;align-items:center;gap:14px;padding:8px 12px 0;background:#0E1024}
+.wdots{display:flex;gap:7px;flex:none;padding:0 4px}
+.wdots i{display:block;width:11px;height:11px;border-radius:50%;background:#2A2E4A}
+.wtabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;min-width:0}
+.wtabs::-webkit-scrollbar{display:none}
+.wtab{flex:none;min-height:40px;padding:0 16px;border:0;border-radius:10px 10px 0 0;background:transparent;color:#A9ADC8;font:500 14px/1 Inter,system-ui,sans-serif;cursor:pointer;position:relative;transition:background-color .2s ease,color .2s ease}
+.wtab:hover{color:#FFFFFF}
+.wtab.on{background:#12142B;color:#FFFFFF}
+.wtab.on::after{content:"";position:absolute;left:14px;right:14px;bottom:6px;height:2px;border-radius:2px;background:#3DDCB0}
+.wtab:focus-visible{outline:2px solid #A59EFF;outline-offset:-2px}
+.wurlrow{display:flex;align-items:center;padding:8px 12px;border-bottom:1px solid #2A2E4A}
+.wurl{display:flex;align-items:center;gap:8px;width:100%;min-height:34px;padding:0 12px;border-radius:999px;background:#0E1024;color:#A9ADC8;font:500 13px/1 "JetBrains Mono",ui-monospace,monospace;text-decoration:none;min-width:0}
+a.wurl:hover{color:#FFFFFF}
+a.wurl:focus-visible{outline:2px solid #A59EFF;outline-offset:2px}
+.wtxt{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wopen{display:inline-flex;align-items:center;gap:4px;font:600 13px/1 Inter,system-ui,sans-serif;color:#A59EFF;flex:none}
+.wscreen{overflow:hidden;background:#0E1024}
+.wtrack{display:flex;width:400%;transition:transform .65s cubic-bezier(.65,0,.35,1)}
+.wslide{flex:0 0 25%;position:relative;aspect-ratio:16 / 10;min-width:0}
+.fr{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0}
+.fr.on{opacity:1}
+.wprog{height:3px;background:#0E1024}
+.wprog i{display:block;height:100%;background:#3DDCB0;transition:width .2s linear}
+.wcap{margin:-24px 0 0;min-height:44px;max-width:720px;text-align:center;font-size:15px;line-height:22px;color:#5A5F7A}
+@media (max-width:640px){.wdots{display:none}.wtab{padding:0 12px;font-size:13px}.wurl{font-size:11px}.wopen{font-size:12px}}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes scan{from{transform:translateY(-60px)}to{transform:translateY(60px)}}
+.rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.08s}.d2{animation-delay:.18s}.d3{animation-delay:.28s}.d4{animation-delay:.4s}
+.live{animation:blink 1.8s ease-in-out infinite}
+.scan{animation:scan 3.4s ease-in-out infinite alternate}
+@supports (animation-timeline: view()){
+.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
+}
+@media (max-width:860px){.nl{display:none}}
+@media (max-width:520px){.hide-xs{display:none}.wrap{padding:0 18px}}
+@media (prefers-reduced-motion: reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation:none !important;transition:none !important}
+}
+[hidden]{display:none !important}
+.wurlrow .wpane{display:block;width:100%}
